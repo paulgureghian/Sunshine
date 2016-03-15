@@ -83,7 +83,7 @@ public class WeatherContract {
         }
 
         public static Uri buildWeatherLocation(String locationSetting) {
-            return null;
+            return CONTENT_URI.buildUpon().appendPath(locationSetting).build();
         }
 
         public static Uri buildWeatherLocationWithStartDate(
