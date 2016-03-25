@@ -38,8 +38,10 @@
         <provider
             android:name=".data.WeatherProvider"
             android:authorities="@string/content_authority"
-            android:exported="false"
-            android:syncable="true" />
+            android:exported="true"
+            android:syncable="true"
+            android:enabled="true">
+        </provider>
 
     </application>
 
