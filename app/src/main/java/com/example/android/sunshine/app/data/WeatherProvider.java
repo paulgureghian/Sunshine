@@ -1,6 +1,5 @@
 package com.example.android.sunshine.app.data;
 
-import android.annotation.TargetApi;
 import android.content.ContentProvider;
 import android.content.ContentValues;
 import android.content.UriMatcher;
@@ -296,8 +295,7 @@ public class WeatherProvider extends ContentProvider {
     }
 
     @Override
-    @TargetApi(11)
-    public void shutdown() {
+      public void shutdown() {
         mOpenHelper.close();
         super.shutdown();
     }
