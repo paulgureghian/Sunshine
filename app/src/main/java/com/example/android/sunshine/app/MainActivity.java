@@ -43,11 +43,13 @@ public class MainActivity extends AppCompatActivity implements ForecastFragment.
                 .findFragmentById(R.id.fragment_forecast));
         forecastFragment.setUseTodayLayout(!mTwoPane);
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
@@ -61,6 +63,7 @@ public class MainActivity extends AppCompatActivity implements ForecastFragment.
         }
         return super.onOptionsItemSelected(item);
     }
+
     private void openPreferredLocationInMap() {
         String location = Utility.getPreferredLocation(this);
         Uri geoLocation = Uri.parse("geo:0,0?").buildUpon()
@@ -74,6 +77,7 @@ public class MainActivity extends AppCompatActivity implements ForecastFragment.
             Log.d(LOG_TAG, "Couldn't call " + location + ", no receiving apps installed!");
         }
     }
+
     @Override
     protected void onResume() {
         super.onResume();
@@ -90,6 +94,7 @@ public class MainActivity extends AppCompatActivity implements ForecastFragment.
             mLocation = location;
         }
     }
+
     @Override
     public void onItemSelected(Uri contentUri) {
         if (mTwoPane) {
