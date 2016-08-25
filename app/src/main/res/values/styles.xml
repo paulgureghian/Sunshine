@@ -1,9 +1,10 @@
 <resources>
 
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">#E91E63</item>
         <item name="colorPrimaryDark">#C51162</item>
+        <item name="android:icon">@mipmap/ic_launcher</item>
+        <item name="android:windowBackground">@color/sunshine_light_blue</item>
 
     </style>
 

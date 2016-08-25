@@ -6,8 +6,9 @@
     android:gravity="center_vertical"
     android:minHeight="?android:attr/listPreferredItemHeight"
     android:orientation="horizontal"
-    android:background="@drawable/touch_selector"
+    android:background="@color/sunshine_light_blue"
     android:padding="16dp">
+
 
     <ImageView
         android:id="@+id/list_item_icon"
