@@ -1,17 +1,32 @@
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fragment_forecast"
+    android:name="com.example.android.sunshine.app.ForecastFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:name="com.example.android.sunshine.app.ForecastFragment"
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
     tools:context="com.example.android.sunshine.app.ForecastFragment"
-    tools:layout="android:layout/list_content"/>
+    tools:layout="android:layout/list_content">
 
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
 
+        </android.support.v7.widget.Toolbar>
 
+    </android.support.design.widget.AppBarLayout>
+
+</android.support.design.widget.CoordinatorLayout>
 
 
 
