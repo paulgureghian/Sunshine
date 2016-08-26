@@ -169,9 +169,9 @@ public class Utility {
             return R.drawable.art_snow;
         } else if (weatherId >= 701 && weatherId <= 761) {
             return R.drawable.art_fog;
-        } else if (weatherId >= 761 || weatherId == 781) {
+        } else if (weatherId == 761 || weatherId == 781) {
             return R.drawable.art_storm;
-        } else if (weatherId >= 800) {
+        } else if (weatherId == 800) {
             return R.drawable.art_clear;
         } else if (weatherId == 801) {
             return R.drawable.art_light_clouds;
