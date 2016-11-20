@@ -12,8 +12,11 @@ import android.os.Build;
 import android.test.AndroidTestCase;
 import android.util.Log;
 
-import com.classic.android.sunshine.app.data.WeatherContract.LocationEntry;
-import com.classic.android.sunshine.app.data.WeatherContract.WeatherEntry;
+import com.classic.android.sunshine.app.DataBase.WeatherContract;
+import com.classic.android.sunshine.app.DataBase.WeatherContract.LocationEntry;
+import com.classic.android.sunshine.app.DataBase.WeatherContract.WeatherEntry;
+import com.classic.android.sunshine.app.DataBase.WeatherDbHelper;
+import com.classic.android.sunshine.app.DataBase.WeatherProvider;
 
 public class TestProvider extends AndroidTestCase {
 

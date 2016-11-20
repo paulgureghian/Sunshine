@@ -1,4 +1,4 @@
-package com.classic.android.sunshine.app;
+package com.classic.android.sunshine.app.Fragments;
 
 import android.database.Cursor;
 import android.net.Uri;
@@ -16,7 +16,11 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.classic.android.sunshine.app.data.WeatherContract;
+import com.classic.android.sunshine.app.AsyncTask.FetchWeatherTask;
+import com.classic.android.sunshine.app.DataBase.WeatherContract;
+import com.classic.android.sunshine.app.Adapter.ForecastAdapter;
+import com.classic.android.sunshine.app.R;
+import com.classic.android.sunshine.app.Utility.Utility;
 
 public class ForecastFragment extends Fragment implements LoaderManager.LoaderCallbacks<Cursor> {
     private static final String SELECTED_KEY = "selected_position";
@@ -36,15 +40,15 @@ public class ForecastFragment extends Fragment implements LoaderManager.LoaderCa
             WeatherContract.LocationEntry.COLUMN_COORD_LAT,
             WeatherContract.LocationEntry.COLUMN_COORD_LONG
     };
-    static final int COL_WEATHER_ID = 0;
-    static final int COL_WEATHER_DATE = 1;
-    static final int COL_WEATHER_DESC = 2;
-    static final int COL_WEATHER_MAX_TEMP = 3;
-    static final int COL_WEATHER_MIN_TEMP = 4;
-    static final int COL_LOCATION_SETTING = 5;
-    static final int COL_WEATHER_CONDITION_ID = 6;
-    static final int COL_COORD_LAT = 7;
-    static final int COL_COORD_LONG = 8;
+    public static final int COL_WEATHER_ID = 0;
+    public static final int COL_WEATHER_DATE = 1;
+    public static final int COL_WEATHER_DESC = 2;
+    public static final int COL_WEATHER_MAX_TEMP = 3;
+    public static final int COL_WEATHER_MIN_TEMP = 4;
+    public static final int COL_LOCATION_SETTING = 5;
+    public static final int COL_WEATHER_CONDITION_ID = 6;
+    public static final int COL_COORD_LAT = 7;
+    public static final int COL_COORD_LONG = 8;
 
     public interface Callback {
         public void onItemSelected(Uri dateUri);
@@ -116,7 +120,7 @@ public class ForecastFragment extends Fragment implements LoaderManager.LoaderCa
         getLoaderManager().initLoader(FORECAST_LOADER, null, this);
         super.onActivityCreated(savedInstanceState);
     }
-    void onLocationChanged() {
+    public void onLocationChanged() {
         updateWeather();
         getLoaderManager().restartLoader(FORECAST_LOADER, null, this);
     }

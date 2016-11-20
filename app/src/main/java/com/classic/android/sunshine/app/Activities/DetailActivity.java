@@ -1,4 +1,4 @@
-package com.classic.android.sunshine.app;
+package com.classic.android.sunshine.app.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,10 +6,13 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.classic.android.sunshine.app.Fragments.DetailFragment;
+import com.classic.android.sunshine.app.R;
+
 public class DetailActivity extends ActionBarActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
         if (savedInstanceState == null) {

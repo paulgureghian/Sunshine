@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/sunshine_light_blue"
-    tools:context="com.classic.android.sunshine.app.DetailActivity"
+    tools:context="com.classic.android.sunshine.app.Activities.DetailActivity"
     tools:ignore="MergeRootFrame"/>
 
 

@@ -1,4 +1,4 @@
-package com.classic.android.sunshine.app.data;
+package com.classic.android.sunshine.app.DataBase;
 
 import android.content.ContentResolver;
 import android.content.ContentUris;
@@ -8,7 +8,7 @@ import android.text.format.Time;
 
 public class WeatherContract {
 
-    public static final String CONTENT_AUTHORITY = "com.example.android.sunshine.app";
+    public static final String CONTENT_AUTHORITY = "com.classic.android.sunshine.app";
 
     public static final Uri BASE_CONTENT_URI = Uri.parse("content://" + CONTENT_AUTHORITY);
 
