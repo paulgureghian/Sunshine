@@ -1,4 +1,4 @@
-package com.classic.android.sunshine.app.data;
+package com.classic.android.sunshine.app.DataBase;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;

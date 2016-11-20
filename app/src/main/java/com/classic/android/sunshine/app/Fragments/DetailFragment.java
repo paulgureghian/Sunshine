@@ -1,4 +1,4 @@
-package com.classic.android.sunshine.app;
+package com.classic.android.sunshine.app.Fragments;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -20,12 +20,14 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.classic.android.sunshine.app.data.WeatherContract;
+import com.classic.android.sunshine.app.DataBase.WeatherContract;
+import com.classic.android.sunshine.app.R;
+import com.classic.android.sunshine.app.Utility.Utility;
 
 public class DetailFragment extends Fragment implements LoaderManager.LoaderCallbacks<Cursor> {
 
     private static final String LOG_TAG = DetailFragment.class.getSimpleName();
-    static final String DETAIL_URI = "URI";
+    public static final String DETAIL_URI = "URI";
     private static final String FORECAST_SHARE_HASHTAG = " #SunshineApp";
 
     private ShareActionProvider mShareActionProvider;
@@ -122,7 +124,7 @@ public class DetailFragment extends Fragment implements LoaderManager.LoaderCall
         getLoaderManager().initLoader(DETAIL_LOADER, null, this);
     }
 
-    void onLocationChanged( String newLocation ){
+    public void onLocationChanged( String newLocation ){
 
         Uri uri = mUri;
         if (null != uri) {

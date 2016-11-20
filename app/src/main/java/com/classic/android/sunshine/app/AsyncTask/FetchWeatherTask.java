@@ -1,4 +1,4 @@
-package com.classic.android.sunshine.app;
+package com.classic.android.sunshine.app.AsyncTask;
 
 import android.content.ContentUris;
 import android.content.ContentValues;
@@ -9,8 +9,9 @@ import android.os.AsyncTask;
 import android.text.format.Time;
 import android.util.Log;
 
-import com.classic.android.sunshine.app.data.WeatherContract;
-import com.classic.android.sunshine.app.data.WeatherContract.WeatherEntry;
+import com.classic.android.sunshine.app.BuildConfig;
+import com.classic.android.sunshine.app.DataBase.WeatherContract;
+import com.classic.android.sunshine.app.DataBase.WeatherContract.WeatherEntry;
 
 import org.json.JSONArray;
 import org.json.JSONException;

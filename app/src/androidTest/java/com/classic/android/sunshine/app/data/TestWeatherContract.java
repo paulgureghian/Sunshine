@@ -3,6 +3,8 @@ package com.classic.android.sunshine.app.data;
 import android.net.Uri;
 import android.test.AndroidTestCase;
 
+import com.classic.android.sunshine.app.DataBase.WeatherContract;
+
 public class TestWeatherContract extends AndroidTestCase {
 
     private static final String TEST_WEATHER_LOCATION = "/North Pole";

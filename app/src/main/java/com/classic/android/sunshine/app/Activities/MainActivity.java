@@ -1,4 +1,4 @@
-package com.classic.android.sunshine.app;
+package com.classic.android.sunshine.app.Activities;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -8,6 +8,11 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.classic.android.sunshine.app.Fragments.DetailFragment;
+import com.classic.android.sunshine.app.Fragments.ForecastFragment;
+import com.classic.android.sunshine.app.R;
+import com.classic.android.sunshine.app.Utility.Utility;
 
 public class MainActivity extends AppCompatActivity implements ForecastFragment.Callback {
     private final String LOG_TAG = MainActivity.class.getSimpleName();

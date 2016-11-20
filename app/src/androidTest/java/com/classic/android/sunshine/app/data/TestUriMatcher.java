@@ -4,6 +4,9 @@ import android.content.UriMatcher;
 import android.net.Uri;
 import android.test.AndroidTestCase;
 
+import com.classic.android.sunshine.app.DataBase.WeatherContract;
+import com.classic.android.sunshine.app.DataBase.WeatherProvider;
+
 
 public class TestUriMatcher extends AndroidTestCase {
     private static final String LOCATION_QUERY = "London, UK";
